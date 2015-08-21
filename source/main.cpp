@@ -6,21 +6,16 @@ GMOD_MODULE_OPEN( )
 {
 	if( luaopen_ffi( state ) != 0 )
 	{
-		LUA->PushSpecial( GarrysMod::Lua::SPECIAL_GLOB );
-
-		LUA->Push( -2 );
-		LUA->SetField( -2, "ffi" );
+		LUA->Push( -1 );
+		LUA->SetField( GarrysMod::Lua::INDEX_GLOBAL, "ffi" );
 	}
 
-	return 0;
+	return 1;
 }
 
 GMOD_MODULE_CLOSE( )
 {
-	LUA->PushSpecial( GarrysMod::Lua::SPECIAL_GLOB );
-
 	LUA->PushNil( );
-	LUA->SetField( -2, "ffi" );
-
+	LUA->SetField( GarrysMod::Lua::INDEX_GLOBAL, "ffi" );
 	return 0;
 }
