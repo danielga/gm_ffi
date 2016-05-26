@@ -2,7 +2,7 @@ gm_ffi
 A module for Garry's Mod that adds an FFI library similar to
 LuaJIT's FFI.
 -----------------------------------------------------------------------
-Copyright (c) 2016, Daniel Almeida
+Copyright (c) 2015-2016, Daniel Almeida
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
