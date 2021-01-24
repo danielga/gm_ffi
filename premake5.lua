@@ -29,7 +29,7 @@ CreateWorkspace({name = "ffi"})
 
 	project("luaffi")
 		kind("StaticLib")
-		includedirs(LUAFFI_DIRECTORY)
+		includedirs({_GARRYSMOD_COMMON_DIRECTORY .. "/include", LUAFFI_DIRECTORY})
 		files({
 			LUAFFI_DIRECTORY .. "/dynasm/dasm_proto.h",
 			LUAFFI_DIRECTORY .. "/dynasm/dasm_x86.h",
