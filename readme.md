@@ -18,6 +18,6 @@ If stuff starts erroring or fails to work, be sure to check the correct line end
 
 This project requires [garrysmod\_common][3], a framework to facilitate the creation of compilations files (Visual Studio, make, XCode, etc). Simply set the environment variable `GARRYSMOD_COMMON` or the premake option `--gmcommon=path` to the path of your local copy of [garrysmod\_common][3].
 
-  [1]: https://github.com/facebookarchive/luaffifb
+  [1]: https://github.com/danielga/cffi-lua
   [2]: http://luajit.org/ext_ffi.html
   [3]: https://github.com/danielga/garrysmod_common

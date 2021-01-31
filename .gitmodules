@@ -1,3 +1,6 @@
-[submodule "luaffifb"]
-	path = luaffifb
-	url = https://github.com/danielga/luaffifb.git
+[submodule "cffi-lua"]
+	path = cffi-lua
+	url = https://github.com/danielga/cffi-lua.git
+[submodule "libffi"]
+	path = libffi
+	url = https://github.com/libffi/libffi.git
