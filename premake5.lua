@@ -25,6 +25,7 @@ CreateWorkspace({name = "ffi"})
 
 	project("cffi-lua")
 		kind("StaticLib")
+		defines("FFI_LITTLE_ENDIAN")
 		includedirs({_GARRYSMOD_COMMON_DIRECTORY .. "/include", LUAFFI_DIRECTORY .. "/src", "include"})
 		files({
 			LUAFFI_DIRECTORY .. "/src/ast.cc",
@@ -55,7 +56,7 @@ CreateWorkspace({name = "ffi"})
 	project("libffi")
 		kind("StaticLib")
 		warnings("Default")
-		defines("FFI_BUILDING")
+		defines({"FFI_BUILDING", "FFI_LITTLE_ENDIAN"})
 		includedirs({LIBFFI_DIRECTORY .. "/include", "include"})
 		files({
 			"include/ffi.h",
@@ -67,6 +68,7 @@ CreateWorkspace({name = "ffi"})
 			LIBFFI_DIRECTORY .. "/src/prep_cif.c",
 			LIBFFI_DIRECTORY .. "/src/java_raw_api.c",
 			LIBFFI_DIRECTORY .. "/src/raw_api.c",
+			LIBFFI_DIRECTORY .. "/src/tramp.c",
 			LIBFFI_DIRECTORY .. "/src/types.c",
 			LIBFFI_DIRECTORY .. "/src/x86/asmnames.h",
 			LIBFFI_DIRECTORY .. "/src/x86/ffi.c",
